@@ -1,0 +1,54 @@
+.dropdown {
+    position: relative;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    @media (min-width: 480px) {
+      margin-top: 0;
+    }
+    @media (max-width: 479px) {
+        width: 50%;
+        margin-top: 20px;
+    }
+    &-label {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &-options {
+      border-radius: 0.25rem;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      list-style: none;
+      padding-left: 1rem;
+  
+      li {
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  :host-context(.light) {
+    .dropdown,
+    .dropdown-options {
+      background-color: var(--l-element);
+    }
+  }
+  
+  :host-context(.dark) {
+    .dropdown,
+    .dropdown-options {
+      background-color: var(--d-element);
+    }
+  }
+
+  .fa {
+    padding-left: 10px;
+    padding-top: 2px;
+  }

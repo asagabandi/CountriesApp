@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    h2 {
+      font-size: 20px;
+    }
+  
+    div {
+      font-weight: 600;
+    }
+  
+    @media (min-width: 480px) {
+      padding: 1.75rem 5rem;
+    }
+  }
+  
+  :host-context(.light) nav {
+    background-color: var(--l-element);
+  }
+  
+  :host-context(.dark) nav {
+    background-color: var(--d-element);
+  }
+
+  .toggle {
+    cursor: pointer;
+  }
+
+  /*.fa-moon-o {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-41%, -53%);
+    height: 40px;
+    width: 40px;
+    box-shadow: -15px 11px 0 -13px white;
+    border-radius: 50%;
+  }*/
